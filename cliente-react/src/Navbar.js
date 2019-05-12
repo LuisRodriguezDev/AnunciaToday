@@ -2,10 +2,10 @@ import React from 'react';
 
 function Navbar() {
   return (
-    <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-light" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="https://bulma.io">
-          AnunciaToday
+          <span className="is-size-4 logo">AnunciaToday</span>
         </a>
 
         <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -20,7 +20,7 @@ function Navbar() {
           <div className="navbar-item">
             <div className="buttons">
               <a className="button is-info">
-                <strong>Crear Anuncio</strong>
+                <strong>Crear Nuevo Anuncio</strong>
               </a>
             </div>
           </div>
