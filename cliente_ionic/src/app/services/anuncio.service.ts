@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -15,5 +15,18 @@ export class AnuncioService {
 
   getAnuncios() {
     return this.http.get(`${this.url}`)
+  }
+
+  crearAnuncio(anuncio) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json'
+      })
+    };
+
+    this.http.post(this.url, anuncio, httpOptions)
+      .subscribe(data => {
+        console.log(data)
+      })
   }
 }
