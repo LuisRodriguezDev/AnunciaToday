@@ -10,7 +10,7 @@ class App extends Component {
         <Navbar />
         <section className="section">
           <div className="container">
-            <h1 className="title has-text-centered">AnunciaToday</h1>
+            <h1 className="title has-text-centered is-size-1 logo">AnunciaToday</h1>
             <Anuncios />
           </div>
         </section>
