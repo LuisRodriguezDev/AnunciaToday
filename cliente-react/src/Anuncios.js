@@ -22,10 +22,10 @@ class Anuncios extends Component {
 
     const resultado = anuncios.map((anuncio) => {
       return (
-        <div className="column is-one-third">
-          <div className="card" key={anuncio.id}>
+        <div className="column is-one-third" key={anuncio.id}>
+          <div className="card">
             <header className="card-header">
-              <p className="card-header-title">
+              <p className="card-header-title is-centered">
                 {anuncio.titulo}
               </p>
             </header>
