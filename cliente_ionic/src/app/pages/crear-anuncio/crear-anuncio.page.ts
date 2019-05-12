@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { AnuncioService } from '../../services/anuncio.service';
 
 @Component({
   selector: 'app-crear-anuncio',
   templateUrl: './crear-anuncio.page.html',
   styleUrls: ['./crear-anuncio.page.scss'],
 })
-export class CrearAnuncioPage implements OnInit {
+export class CrearAnuncioPage {
 
-  constructor() { }
+  constructor(private anuncioService: AnuncioService) {
 
-  ngOnInit() {
+  }
+
+  anuncio = {}
+
+  logForm() {
+    this.anuncioService.crearAnuncio(this.anuncio);
   }
 
 }
