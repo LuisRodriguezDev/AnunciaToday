@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AnuncioService } from '../../services/anuncio.service';
 import { Observable } from 'rxjs';
 
@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   templateUrl: './anuncios.page.html',
   styleUrls: ['./anuncios.page.scss'],
 })
-export class AnunciosPage implements OnInit {
+export class AnunciosPage {
   anuncios: Observable<any>;
 
   constructor(private anuncioService: AnuncioService) { }
 
-  ngOnInit() {
+  ionViewDidEnter() {
     this.anuncios = this.anuncioService.getAnuncios();
   }
 
