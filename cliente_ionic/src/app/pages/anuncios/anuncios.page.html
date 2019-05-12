@@ -5,5 +5,17 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+
+    <ion-item *ngFor="let anuncio of (anuncios | async)">
+
+      <ion-label text-wrap>
+        <h3>{{ anuncio.titulo }}</h3>
+        {{ anuncio.descripcion }}
+      </ion-label>
+
+    </ion-item>
+
+  </ion-list>
 
 </ion-content>
