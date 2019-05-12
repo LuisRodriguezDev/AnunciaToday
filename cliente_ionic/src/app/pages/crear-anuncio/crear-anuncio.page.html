@@ -10,7 +10,17 @@
 <ion-content padding>
 
 <ion-content>
-  <ion-button expand="block" routerLink="/dashboard" routerDirection="root">
-    Crear Nuevo Anuncio
-  </ion-button>
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label position="floating">Titulo</ion-label>
+      <ion-input type="text" [(ngModel)]="anuncio.titulo" name="titulo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripcion</ion-label>
+      <ion-textarea [(ngModel)]="anuncio.descripcion" name="descripcion"></ion-textarea>
+    </ion-item>
+    <ion-button expand="block" type="submit">
+      Crear Nuevo Anuncio
+    </ion-button>
+  </form>
 </ion-content>
