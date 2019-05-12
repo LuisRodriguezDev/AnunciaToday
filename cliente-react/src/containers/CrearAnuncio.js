@@ -30,8 +30,8 @@ class CrearAnuncio extends Component {
       body: JSON.stringify(this.state)
     }).then(res=>res.json())
       .then(res => {
-        console.log(res);
-        this.setState(this.initialState)
+        this.setState(this.initialState);
+        this.props.history.push(`/`);
       });
   }
 
