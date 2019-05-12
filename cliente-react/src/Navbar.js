@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
-function Navbar() {
+function Navbar(props) {
+  console.log('Navbar Props: ', props)
+
   return (
     <nav className="navbar is-light" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -20,9 +23,13 @@ function Navbar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <Link className="button is-info" to="/nuevo_anuncio">
-                <strong>Crear Nuevo Anuncio</strong>
-              </Link>
+              {
+                window.location.pathname === '/nuevo_anuncio' ?
+                null :
+                <Link className="button is-info" to="/nuevo_anuncio">
+                  <strong>Crear Nuevo Anuncio</strong>
+                </Link>
+              }
             </div>
           </div>
         </div>
