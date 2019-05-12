@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AnuncioService } from '../../services/anuncio.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-anuncios',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./anuncios.page.scss'],
 })
 export class AnunciosPage implements OnInit {
+  anuncios: Observable<any>;
 
-  constructor() { }
+  constructor(private anuncioService: AnuncioService) { }
 
   ngOnInit() {
+    this.anuncios = this.anuncioService.getAnuncios();
   }
 
 }
