@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar is-light" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <Link className="navbar-item" to="/">
           <span className="is-size-4 logo">AnunciaToday</span>
-        </a>
+        </Link>
 
         <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
@@ -19,9 +20,9 @@ function Navbar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-info">
+              <Link className="button is-info" to="/nuevo_anuncio">
                 <strong>Crear Nuevo Anuncio</strong>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
