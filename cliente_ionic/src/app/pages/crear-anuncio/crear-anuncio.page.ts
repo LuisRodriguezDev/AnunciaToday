@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AnuncioService } from '../../services/anuncio.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { AnuncioService } from '../../services/anuncio.service';
 })
 export class CrearAnuncioPage {
 
-  constructor(private anuncioService: AnuncioService) {
+  constructor(private anuncioService: AnuncioService, private router: Router) {
 
   }
 
@@ -16,6 +17,7 @@ export class CrearAnuncioPage {
 
   logForm() {
     this.anuncioService.crearAnuncio(this.anuncio);
+    this.router.navigateByUrl('/');
   }
 
 }
